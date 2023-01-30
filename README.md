@@ -1,2 +1,2 @@
-# -blog-frontend-upgrade
+# blog-frontend-upgrade
 Учебный проект для повышения квалификации
