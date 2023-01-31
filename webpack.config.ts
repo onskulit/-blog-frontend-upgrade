@@ -1,6 +1,8 @@
 import path from "path";
 import webpack from "webpack";
-import HTMLWebpackPlugin from "html-webpack-plugin";
+import { buildPlugins } from "./config/build/buildPlugins";
+import { buildLoaders } from "./config/build/buildLoaders";
+import { buildResolvers } from "./config/build/buildResolvers";
 
 const config: webpack.Configuration = {
   mode: "development",
@@ -12,28 +14,12 @@ const config: webpack.Configuration = {
     //delete extra files
     clean: true,
   },
-  plugins: [
-    //plugin for using custom index.html as template
-    new HTMLWebpackPlugin({
-      template: path.resolve(__dirname, "public", "index.html"),
-    }),
-    //plugin to check building progress
-    new webpack.ProgressPlugin(),
-  ],
+  plugins: buildPlugins(),
   module: {
-    rules: [
-      {
-        //tsx and ts
-        test: /\.tsx?$/,
-        use: "ts-loader",
-        exclude: /node_modules/,
-      },
-    ],
+    rules: buildLoaders(),
   },
   //resolve is needed to add import file path without extentions
-  resolve: {
-    extensions: [".tsx", ".ts", ".js"],
-  },
+  resolve: buildResolvers(),
 };
 
 export default config;
