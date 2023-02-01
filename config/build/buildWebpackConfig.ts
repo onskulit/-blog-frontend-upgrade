@@ -1,5 +1,6 @@
 import path from "path";
 import webpack from "webpack";
+import { buildDevServer } from "./buildDevServer";
 import { buildLoaders } from "./buildLoaders";
 import { buildPlugins } from "./buildPlugins";
 import { buildResolvers } from "./buildResolvers";
@@ -26,5 +27,8 @@ export const buildWebpackConfig = (
     },
     //resolve is needed to add import file path without extentions
     resolve: buildResolvers(),
+    //needed for mapping
+    devtool: "inline-source-map",
+    devServer: buildDevServer(options),
   };
 };
