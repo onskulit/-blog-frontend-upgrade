@@ -1,3 +1,4 @@
 import { render } from "react-dom";
+import "./index.scss";
 
-render(<div>Helloфф</div>, document.getElementById("root"));
+render(<div>Hello</div>, document.getElementById("root"));
