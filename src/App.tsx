@@ -1,8 +1,9 @@
+import { Suspense } from "react";
 import { Link } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import "./index.scss";
-import { About } from "./pages/about/About";
-import { Main } from "./pages/main/Main";
+import { AboutLazy } from "./pages/about/About.lazy";
+import { MainLazy } from "./pages/main/Main.lazy";
 
 export const App = () => {
   return (
@@ -10,10 +11,12 @@ export const App = () => {
       <Link to="/">Main Page</Link>
       <Link to="/about">About</Link>
 
-      <Routes>
-        <Route path={"/"} element={<Main />} />
-        <Route path={"/about"} element={<About />} />
-      </Routes>
+      <Suspense fallback="Loading...">
+        <Routes>
+          <Route path={"/"} element={<MainLazy />} />
+          <Route path={"/about"} element={<AboutLazy />} />
+        </Routes>
+      </Suspense>
     </>
   );
 };
