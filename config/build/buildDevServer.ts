@@ -9,5 +9,7 @@ export const buildDevServer = (
     port,
     //open browser tab with app after build
     open: true,
+    //needed to fix problem when you update page on route ('/about' e.g.) and browser show error 'Cannot GET /about'
+    historyApiFallback: true,
   };
 };
