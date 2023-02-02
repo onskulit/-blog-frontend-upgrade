@@ -23,7 +23,7 @@ export const buildWebpackConfig = (
     },
     plugins: buildPlugins(paths),
     module: {
-      rules: buildLoaders(),
+      rules: buildLoaders(options),
     },
     //resolve is needed to add import file path without extentions
     resolve: buildResolvers(),

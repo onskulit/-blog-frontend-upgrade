@@ -1,6 +1,10 @@
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import webpack from "webpack";
+import { BuildOptions } from "./types/config";
 
-export const buildLoaders = (): webpack.RuleSetRule[] => {
+export const buildLoaders = ({
+  isDev,
+}: BuildOptions): webpack.RuleSetRule[] => {
   //if do not use typescript - also babel-loader is neaded
   const typescriptLoader = {
     //tsx and ts
@@ -13,7 +17,8 @@ export const buildLoaders = (): webpack.RuleSetRule[] => {
     test: /\.s[ac]ss$/i,
     use: [
       // Creates `style` nodes from JS strings
-      "style-loader",
+      // If isDev we don't need plugin to create sepate css file in build
+      isDev ? "style-loader" : MiniCssExtractPlugin.loader,
       // Translates CSS into CommonJS
       "css-loader",
       // Compiles Sass to CSS
