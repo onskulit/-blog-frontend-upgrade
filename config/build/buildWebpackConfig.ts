@@ -26,7 +26,7 @@ export const buildWebpackConfig = (
       rules: buildLoaders(options),
     },
     //resolve is needed to add import file path without extentions
-    resolve: buildResolvers(),
+    resolve: buildResolvers(options),
     //needed for mapping
     devtool: isDev ? "inline-source-map" : undefined,
     devServer: isDev ? buildDevServer(options) : undefined,
