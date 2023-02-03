@@ -4,7 +4,7 @@ import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from "./ThemeContext";
 const defaultTheme =
   (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || "light";
 
-const ThemeProvider = ({ children }: { children: ReactElement }) => {
+export const ThemeProvider = ({ children }: { children: ReactElement }) => {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
   const defaultProps = useMemo(
@@ -21,5 +21,3 @@ const ThemeProvider = ({ children }: { children: ReactElement }) => {
     </ThemeContext.Provider>
   );
 };
-
-export default ThemeProvider;
