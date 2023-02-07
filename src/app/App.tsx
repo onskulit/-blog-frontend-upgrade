@@ -4,15 +4,15 @@ import "./styles/index.scss";
 import { useTheme } from "shared/lib/providers/ThemeProvider";
 import { classNames } from "shared/lib/helpers";
 import { AppRouter } from "./lib/router/AppRouter";
+import { Navbar } from "widgets/navbar";
 
 export const App = () => {
   const { theme, toggleTheme } = useTheme();
   return (
     <div className={classNames("app", {}, [theme])}>
-      <button onClick={toggleTheme}>TOGGLE</button>
+      <Navbar />
 
-      <Link to={"/"}>Главная</Link>
-      <Link to={"/about"}>О сайте</Link>
+      <button onClick={toggleTheme}>TOGGLE</button>
 
       <AppRouter />
     </div>
