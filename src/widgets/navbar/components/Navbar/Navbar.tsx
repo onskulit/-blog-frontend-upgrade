@@ -1,4 +1,4 @@
-import { AppLink } from "shared/components";
+import { Link } from "shared/components";
 import { classNames } from "shared/lib/helpers";
 import { RoutePath } from "shared/lib/router";
 import styles from "./Navbar.module.scss";
@@ -14,16 +14,12 @@ export const Navbar = (props: NavbarProps) => {
   return (
     <nav className={classNames(styles.Navbar, {}, [className])}>
       <div className={styles.links}>
-        <AppLink
-          to={RoutePath.main}
-          className={styles.mainLink}
-          theme="secondary"
-        >
+        <Link to={RoutePath.main} className={styles.mainLink} theme="secondary">
           Главная
-        </AppLink>
-        <AppLink to={RoutePath.about} theme="secondary">
+        </Link>
+        <Link to={RoutePath.about} theme="secondary">
           О сайте
-        </AppLink>
+        </Link>
       </div>
     </nav>
   );
