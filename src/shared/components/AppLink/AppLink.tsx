@@ -3,19 +3,17 @@ import { Link, LinkProps } from "react-router-dom";
 import { classNames } from "shared/lib/helpers";
 import styles from "./AppLink.module.scss";
 
-type AppLinkThemeType = "primary" | "secondary";
+type AppLinkTheme = "primary" | "secondary";
 
 /** Props for component AppLink */
 interface AppLinkProps extends LinkProps {
   /** Theme */
-  theme?: AppLinkThemeType;
+  theme?: AppLinkTheme;
   /** External className */
   className?: string;
-  /** Child component */
-  children?: ReactNode;
 }
 
-export const AppLink = (props: AppLinkProps) => {
+export const AppLink = (props: React.PropsWithChildren<AppLinkProps>) => {
   const { className, to, children, theme = "primary", ...otherProps } = props;
   return (
     <Link
