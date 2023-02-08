@@ -3,12 +3,12 @@ import { Link, LinkProps } from "react-router-dom";
 import { classNames } from "shared/lib/helpers";
 import styles from "./AppLink.module.scss";
 
-type AppLinkTheme = "primary" | "secondary";
+type AppLinkThemeType = "primary" | "secondary";
 
 /** Props for component AppLink */
 interface AppLinkProps extends LinkProps {
   /** Theme */
-  theme?: AppLinkTheme;
+  theme?: AppLinkThemeType;
   /** External className */
   className?: string;
 }
