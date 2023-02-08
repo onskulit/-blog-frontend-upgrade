@@ -1,6 +1,10 @@
 import { createContext } from "react";
 
 export type Theme = "light" | "dark";
+export const Theme = {
+  light: "light",
+  dark: "dark",
+} as const;
 
 export interface ThemeContextProps {
   theme?: Theme;
