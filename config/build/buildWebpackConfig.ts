@@ -21,7 +21,7 @@ export const buildWebpackConfig = (
       //delete extra files
       clean: true,
     },
-    plugins: buildPlugins(paths),
+    plugins: buildPlugins(options),
     module: {
       rules: buildLoaders(options),
     },
