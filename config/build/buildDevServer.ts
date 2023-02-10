@@ -11,5 +11,7 @@ export const buildDevServer = (
     open: true,
     //needed to fix problem when you update page on route ('/about' e.g.) and browser show error 'Cannot GET /about'
     historyApiFallback: true,
+    //needed for hot module replacement
+    hot: true,
   };
 };

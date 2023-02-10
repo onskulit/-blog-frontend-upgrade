@@ -22,8 +22,11 @@ export const buildPlugins = (
       filename: "css/[name].[contenthash:8].css",
       chunkFilename: "css/[name].[contenthash:8].css",
     }),
+    //needed to get webpack config variables as global variables
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
+    //needed to update website without page refresh
+    new webpack.HotModuleReplacementPlugin(),
   ];
 };
