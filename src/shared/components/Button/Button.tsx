@@ -1,25 +1,28 @@
-import { ButtonHTMLAttributes } from "react";
-import { classNames } from "shared/lib/helpers";
-import styles from "./Button.module.scss";
+import { ButtonHTMLAttributes } from 'react';
+import { classNames } from 'shared/lib/helpers';
+import styles from './Button.module.scss';
 
-type ButtonTheme = "clear";
+type ButtonTheme = 'clear';
 
 /** Props for component Button */
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  /** Theme */
-  theme?: ButtonTheme;
-  /** External className */
-  className?: string;
+    /** Theme */
+    theme?: ButtonTheme;
+    /** External className */
+    className?: string;
 }
 
 export const Button = (props: React.PropsWithChildren<ButtonProps>) => {
-  const { theme = "clear", className, children, ...otherProps } = props;
+  const {
+    theme = 'clear', className, children, ...otherProps
+  } = props;
   return (
-    <button
-      className={classNames(styles.Button, {}, [className, styles[theme]])}
-      {...otherProps}
-    >
-      {children}
-    </button>
+      <button
+        type="button"
+        className={classNames(styles.Button, {}, [className, styles[theme]])}
+        {...otherProps}
+      >
+          {children}
+      </button>
   );
 };

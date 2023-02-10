@@ -1,5 +1,5 @@
-import { classNames } from "shared/lib/helpers";
-import styles from "./Test.module.scss";
+import { classNames } from 'shared/lib/helpers';
+import styles from './Test.module.scss';
 
 /** Пропсы компонента Test */
 interface TestProps {

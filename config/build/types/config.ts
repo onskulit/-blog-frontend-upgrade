@@ -1,10 +1,10 @@
-export type BuildMode = "production" | "development";
+export type BuildMode = 'production' | 'development';
 
 export interface BuildPaths {
   entry: string;
   build: string;
   html: string;
-  //path for absolute paths
+  // path for absolute paths
   src: string;
 }
 
