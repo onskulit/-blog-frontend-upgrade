@@ -11,19 +11,19 @@ interface NavbarProps {
 }
 
 export const Navbar = (props: NavbarProps) => {
-  const { className } = props;
+    const { className } = props;
 
-  const { t, i18n } = useTranslation();
-  return (
-      <nav className={classNames(styles.Navbar, {}, [className])}>
-          <div className={styles.links}>
-              <Link to={RoutePath.main} className={styles.mainLink} theme="secondary">
-                  {t('Main')}
-              </Link>
-              <Link to={RoutePath.about} theme="secondary">
-                  {t('About')}
-              </Link>
-          </div>
-      </nav>
-  );
+    const { t, i18n } = useTranslation();
+    return (
+        <nav className={classNames(styles.Navbar, {}, [className])}>
+            <div className={styles.links}>
+                <Link to={RoutePath.main} className={styles.mainLink} theme="secondary">
+                    {t('Main')}
+                </Link>
+                <Link to={RoutePath.about} theme="secondary">
+                    {t('About')}
+                </Link>
+            </div>
+        </nav>
+    );
 };

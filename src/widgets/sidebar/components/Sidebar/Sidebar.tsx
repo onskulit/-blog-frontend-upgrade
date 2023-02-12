@@ -10,24 +10,24 @@ interface SidebarProps {
 }
 
 export const Sidebar = ({ className }: SidebarProps) => {
-  const [collapsed, setCollapsed] = useState(false);
-  const { t } = useTranslation();
+    const [collapsed, setCollapsed] = useState(false);
+    const { t } = useTranslation();
 
-  const onToggle = () => {
-    setCollapsed((prev) => !prev);
-  };
+    const onToggle = () => {
+        setCollapsed((prev) => !prev);
+    };
 
-  return (
-      <div
-        className={classNames(styles.Sidebar, { [styles.collapsed]: collapsed }, [
-          className,
-        ])}
-      >
-          <Button onClick={onToggle}>{collapsed ? t('expand') : t('collapse')}</Button>
-          <div className={styles.switchers}>
-              <ThemeSwitcher />
-              <LanguageSwitcher />
-          </div>
-      </div>
-  );
+    return (
+        <div
+            className={classNames(styles.Sidebar, { [styles.collapsed]: collapsed }, [
+                className,
+            ])}
+        >
+            <Button onClick={onToggle}>{collapsed ? t('expand') : t('collapse')}</Button>
+            <div className={styles.switchers}>
+                <ThemeSwitcher />
+                <LanguageSwitcher />
+            </div>
+        </div>
+    );
 };

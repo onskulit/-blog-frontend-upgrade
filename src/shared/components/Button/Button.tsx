@@ -13,16 +13,16 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = (props: React.PropsWithChildren<ButtonProps>) => {
-  const {
-    theme = 'clear', className, children, ...otherProps
-  } = props;
-  return (
-      <button
-        type="button"
-        className={classNames(styles.Button, {}, [className, styles[theme]])}
-        {...otherProps}
-      >
-          {children}
-      </button>
-  );
+    const {
+        theme = 'clear', className, children, ...otherProps
+    } = props;
+    return (
+        <button
+            type="button"
+            className={classNames(styles.Button, {}, [className, styles[theme]])}
+            {...otherProps}
+        >
+            {children}
+        </button>
+    );
 };

@@ -7,8 +7,8 @@ export const AppRouter = () => (
         <Routes>
             {Object.values(routeMapper).map(({ path, element }) => (
                 <Route
-                  path={path}
-                  element={<div className="page-wrapper">{element}</div>}
+                    path={path}
+                    element={<div className="page-wrapper">{element}</div>}
                 />
             ))}
         </Routes>

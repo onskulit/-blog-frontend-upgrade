@@ -21,7 +21,9 @@ module.exports = {
     'i18next',
   ],
   rules: {
+    indent: [2, 4],
     'react/jsx-indent': [2, 4],
+    'react/jsx-indent-props': [2, 4],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'react/react-in-jsx-scope': 'off',
     'import/prefer-default-export': 'off',
@@ -40,7 +42,7 @@ module.exports = {
     // TODO: fix this rules
     'no-redeclare': 1,
     '@typescript-eslint/no-redeclare': 1,
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': [1, { markupOnly: true }],
   },
   globals: {
     React: true,

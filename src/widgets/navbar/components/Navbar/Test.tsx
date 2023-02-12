@@ -8,6 +8,6 @@ interface TestProps {
 }
 
 export const Test = (props: TestProps) => {
-  const { className } = props;
-  return <div className={classNames(styles.Test, {}, [className])}>Test</div>;
+    const { className } = props;
+    return <div className={classNames(styles.Test, {}, [className])}>Test</div>;
 };
