@@ -2,5 +2,7 @@
   "Main": "Main",
   "About": "About",
   "Main page": "Main Page",
-  "About page": "About Page"
+  "About page": "About Page",
+  "expand": "expand",
+  "collapse": "collapse"
 }
