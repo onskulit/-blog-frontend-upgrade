@@ -5,5 +5,6 @@
   "About page": "Страница о сайте",
   "expand": "развернуть",
   "collapse": "свернуть",
-  "Page is not found": ""
+  "Page is not found": "Страница не найдена",
+  "An unexpected error has occurred": "Возникла непредвиденная ошибка"
 }
