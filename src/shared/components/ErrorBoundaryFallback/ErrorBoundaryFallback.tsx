@@ -1,12 +1,11 @@
+import { Suspense } from 'react';
 import { FallbackProps } from 'react-error-boundary';
 import { useTranslation } from 'react-i18next';
+import { Loader } from 'shared/components';
 
-export const ErrorBoundaryFallback = (props: FallbackProps) => {
-    const { error } = props;
-    /* TODO: solve problem with hooks */
-    const { t } = useTranslation();
+import { ErrorBoundaryMessage } from './ErrorBoundaryMessage';
 
-    return (
-        <div>{`${t('An unexpected error has occurred')}: ${error.message}`}</div>
-    );
-};
+export const ErrorBoundaryFallback = (props: FallbackProps) => (
+    <Suspense fallback={<Loader />}><ErrorBoundaryMessage {...props} /></Suspense>
+
+);
