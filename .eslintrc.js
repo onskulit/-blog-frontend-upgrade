@@ -43,11 +43,16 @@ module.exports = {
     // TODO: fix this rules
     'no-redeclare': 1,
     '@typescript-eslint/no-redeclare': 1,
-    'i18next/no-literal-string': [1, { markupOnly: true }],
+    'i18next/no-literal-string': [1, { markupOnly: true, ignoreAttribute: ['data-testid'] }],
   },
   globals: {
     React: true,
     __IS_DEV__: true,
   },
-
+  overrides: [{
+    files: ['**/src/**/*.test.{ts,tsx}'],
+    rules: {
+      'i18next/no-literal-string': 0,
+    },
+  }],
 };
