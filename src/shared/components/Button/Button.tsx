@@ -18,6 +18,7 @@ export const Button = (props: React.PropsWithChildren<ButtonProps>) => {
     } = props;
     return (
         <button
+            data-testid="button"
             type="button"
             className={classNames(styles.Button, {}, [className, styles[theme]])}
             {...otherProps}
