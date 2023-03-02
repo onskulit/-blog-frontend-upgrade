@@ -4,7 +4,7 @@ import {ComponentStory, ComponentMeta} from '@storybook/react';
 import Main from './Main';
 
 export default {
-    title: 'shared/components/Main',
+    title: 'pages/main/Main',
     component: Main,
 } as ComponentMeta<typeof Main>
 

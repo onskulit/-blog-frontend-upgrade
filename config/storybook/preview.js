@@ -1,3 +1,5 @@
+import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator';
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
@@ -7,3 +9,7 @@ export const parameters = {
     },
   },
 };
+
+export const decorators = [
+  StyleDecorator,
+];

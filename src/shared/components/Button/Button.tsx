@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes } from 'react';
 import { classNames } from 'shared/lib/helpers';
 import styles from './Button.module.scss';
 
-type ButtonTheme = 'clear';
+type ButtonTheme = 'clear' | 'outline';
 
 /** Props for component Button */
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
