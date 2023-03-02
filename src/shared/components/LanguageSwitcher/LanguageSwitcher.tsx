@@ -1,12 +1,11 @@
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/helpers';
 import { Button } from 'shared/components';
 
 /** Props for component LanguageSwitcher */
 interface LanguageSwitcherProps {
-  /** External className */
-  className?: string;
+    /** External className */
+    className?: string;
 }
 
 export const LanguageSwitcher = (props: LanguageSwitcherProps) => {

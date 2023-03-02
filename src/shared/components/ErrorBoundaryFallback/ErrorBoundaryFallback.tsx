@@ -6,6 +6,7 @@ import { Loader } from 'shared/components';
 import { ErrorBoundaryMessage } from './ErrorBoundaryMessage';
 
 export const ErrorBoundaryFallback = (props: FallbackProps) => (
-    <Suspense fallback={<Loader />}><ErrorBoundaryMessage {...props} /></Suspense>
-
+    <Suspense fallback={<Loader />}>
+        <ErrorBoundaryMessage {...props} />
+    </Suspense>
 );
