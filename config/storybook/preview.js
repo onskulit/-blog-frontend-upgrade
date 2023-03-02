@@ -1,15 +1,14 @@
-import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator';
+import { StyleDecorator } from '../../src/shared/config/storybook/decorators/StyleDecorator';
+import { ThemeDecorator } from '../../src/shared/config/storybook/decorators/ThemeDecorator';
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    controls: {
+        matchers: {
+            color: /(background|color)$/i,
+            date: /Date$/,
+        },
     },
-  },
 };
 
-export const decorators = [
-  StyleDecorator,
-];
+export const decorators = [StyleDecorator, ThemeDecorator('light')];
