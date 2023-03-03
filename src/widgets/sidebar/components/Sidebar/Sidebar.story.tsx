@@ -1,15 +1,15 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Main from './Main';
+import { Sidebar } from './Sidebar';
 import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator';
 
 export default {
-    title: 'pages/main/Main',
-    component: Main,
-} as ComponentMeta<typeof Main>;
+    title: 'widgets/sidebar/Sidebar',
+    component: Sidebar,
+} as ComponentMeta<typeof Sidebar>;
 
-const Template: ComponentStory<typeof Main> = () => <Main />;
+const Template: ComponentStory<typeof Sidebar> = () => <Sidebar />;
 
 export const normal = Template.bind({});
 normal.args = {};

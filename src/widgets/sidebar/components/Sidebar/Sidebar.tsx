@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import styles from './Sidebar.module.scss';
 
 interface SidebarProps {
-  className?: string;
+    className?: string;
 }
 
 export const Sidebar = ({ className }: SidebarProps) => {
@@ -20,9 +20,11 @@ export const Sidebar = ({ className }: SidebarProps) => {
     return (
         <div
             data-testid="sidebar"
-            className={classNames(styles.Sidebar, { [styles.collapsed]: collapsed }, [
-                className,
-            ])}
+            className={classNames(
+                styles.Sidebar,
+                { [styles.collapsed]: collapsed },
+                [className]
+            )}
         >
             <Button onClick={onToggle} data-testid="sidebar.toggle">
                 {collapsed ? t('expand') : t('collapse')}
