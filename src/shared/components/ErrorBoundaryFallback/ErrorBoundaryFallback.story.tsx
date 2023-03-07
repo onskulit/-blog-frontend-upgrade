@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ErrorBoundaryFallback } from './ErrorBoundaryFallback';
 import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator';
+import { ErrorBoundaryFallback } from './ErrorBoundaryFallback';
 
 export default {
     title: 'shared/components/ErrorBoundaryFallback',

@@ -12,6 +12,7 @@ export default ({config}: {config: Configuration}) => {
     config.resolve?.modules?.push(paths.src);
     config.resolve?.extensions?.push('.ts', '.tsx');
 
+    // eslint-disable-next-line no-param-reassign
     config.module!.rules = config.module!.rules!.map<RuleSetRule | "...">((rule: RuleSetRule | "...") => {
         if (rule === '...') {
             return rule;

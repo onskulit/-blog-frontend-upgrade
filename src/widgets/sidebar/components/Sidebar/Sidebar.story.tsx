@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Sidebar } from './Sidebar';
 import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator';
+import { Sidebar } from './Sidebar';
 
 export default {
     title: 'widgets/sidebar/Sidebar',

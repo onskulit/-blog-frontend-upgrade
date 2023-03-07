@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Link } from './Link';
 import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator';
+import { Link } from './Link';
 
 export default {
     title: 'shared/components/Link',

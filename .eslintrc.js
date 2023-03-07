@@ -47,6 +47,7 @@ module.exports = {
                 ignoreAttribute: ['data-testid', 'to', 'theme'],
             },
         ],
+        'no-shadow': 1,
     },
     globals: {
         React: true,
@@ -60,4 +61,4 @@ module.exports = {
             },
         },
     ],
-}
+};
