@@ -10,8 +10,8 @@ export const buildPlugins = (
 ): webpack.WebpackPluginInstance[] => {
     const { paths, isDev } = options;
 
-    return [
-    // plugin for using custom index.html as a template
+    const plugins: webpack.WebpackPluginInstance[] = [
+        // plugin for using custom index.html as a template
         new HTMLWebpackPlugin({
             template: paths.html,
         }),
@@ -27,10 +27,19 @@ export const buildPlugins = (
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        // needed to update website without page refresh
-        new webpack.HotModuleReplacementPlugin(),
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false,
-        }),
-    ];
+    ]
+
+    if (isDev) {
+        plugins.push(
+            // needed to update website without page refresh
+            new webpack.HotModuleReplacementPlugin(),
+        )
+        plugins.push(
+            new BundleAnalyzerPlugin({
+                openAnalyzer: false,
+            }),
+        )
+    }
+
+    return plugins;
 };
